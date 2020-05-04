@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>infoJugadoras</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <h2>HOLA</h2>
-</ion-content>
+<body>
+  <ion-app width="300" height="400">
+    <ion-content>
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title>{{ nombre }}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content fullscreen translucent>
+        <ion-card text-white>
+          <img src="{{ img }}" width="350" height="250" />
+          <ion-card-header>
+            <ion-card-title>{{ posicion }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>{{ bio }} </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ion-content>
+  </ion-app>
+</body>

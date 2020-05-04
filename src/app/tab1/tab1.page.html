@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      PLANTILLA BARÇA FEMENINO 2019-2020
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,10 +9,13 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-list-header>
-      Jugadores
+      JUGADORAS
     </ion-list-header>
 
-    <ion-item *ngFor="let item of jugadoras">
+    <ion-item
+      *ngFor="let item of jugadoras"
+      [routerLink]="['/info-jugadoras',item]"
+    >
       <ion-avatar slot="start">
         <img src="{{ item.img }}" />
       </ion-avatar>
@@ -20,9 +23,6 @@
         <h2>{{ item.nombre }}</h2>
         <h3>{{ item.posicion }}</h3>
       </ion-label>
-      <button ion-button>
-        <ion-icon name="arrow-forward-outline"></ion-icon>
-      </button>
     </ion-item>
   </ion-list>
 </ion-content>
